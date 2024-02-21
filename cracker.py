@@ -33,6 +33,6 @@ class HashConverter:
             for unidentified in passwordHashlist:
                 print("No password found:", unidentified)
 
-
+#Requires a /file-text-md5/txt and wordlist for bruteforcing
 a1 = HashConverter("password-hashes.txt", "rockyou.txt")
 a1.crack()
