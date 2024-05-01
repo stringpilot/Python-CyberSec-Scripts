@@ -12,9 +12,11 @@ def server_socket(ip, port):
     while True:
         client, address = server.accept()
         print(f'[+] Accepted Connection From {address[0]}:{address[1]}')
-        server_handler = threading.Thread(target=server_send_recieve, args=(client))
+        server_handler = threading.Thread(target=server_send_recieve, args=(client,))
         server_handler.start()
 
+#ADD REQ BODY RESPONSE
+#Add GET / POST / DELETE FUNCTIONS WHEN CLIENT CALLS
 
 def server_send_recieve(client_socket):
     with client_socket as socks:
